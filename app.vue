@@ -114,7 +114,7 @@
   <!-- hero -->
   <section class="bg-white dark:bg-gray-900">
     <div class="grid lg:mt-0 lg:grid-cols-12">
-      <div class="py-8 max-w-screen-xl text-center lg:col-span-7 lg:py-16">
+      <div class="py-8 max-w-screen-xl text-center lg:col-span-7">
         <h1
           class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
         >
@@ -123,7 +123,7 @@
           <!-- Révolutionnez l'expérience de commande de votre restaurant -->
         </h1>
         <p
-          class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
+          class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-4 xl:px-4 dark:text-gray-400"
         >
           Une interface conviviale, des menus interactifs et des options de
           personnalisation avancées, le tout à portée de main.
@@ -150,8 +150,8 @@
         </div>
       </div>
 
-      <div class="lg:col-span-5 lg:py-16 flex justify-center items-center">
-        <img class="max-w-full h-auto" src="./public/groupImage.svg" />
+      <div class="lg:col-span-5">
+        <img class="max-w-full h-auto" src="./public/imggroupclean.jpg" />
       </div>
     </div>
   </section>
@@ -162,8 +162,8 @@
       <div
         class="grid max-w-screen-4xl py-8 mx-auto xl:gap-0 lg:py-4 lg:grid-cols-12"
       >
-        <div class="lg:col-span-5 lg:py-16">
-          <img src="./public/IMG_1153.jpg" />
+        <div class="lg:col-span-5">
+          <img src="./public/qrappmenu2.png" />
         </div>
         <div class="place-self-center grid lg:col-span-7">
           <h1
