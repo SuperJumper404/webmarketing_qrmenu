@@ -129,7 +129,7 @@
           personnalisation avancées, le tout à portée de main.
         </p>
         <div
-          class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
+          class="block flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
         >
           <a
             href="#"
@@ -182,19 +182,68 @@
             Un suivi de la préparation de la commande en temps réel. <br />
             Un service à table fluide et accelerer.
           </p>
-          <div
+          <!-- <div
             class="inline-flex mx-auto justify-center items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
           >
             <div
-              class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3"
+              id="slide"
+              class="inline-flex mx-auto justify-center items-center"
             >
-              <img class="w-6 h-6" src="./public/arrowleft.svg" />
+              <div
+                class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3"
+              >
+                <img class="w-6 h-6" src="./public/arrowleft.svg" />
+              </div>
+              <span class="text-xl font-medium"
+                >Commencez l'aventure maintenant !</span
+              >
             </div>
-            <span class="text-xl font-medium"
-              >Commencez l'aventure maintenant !</span
-            >
+          </div> -->
+          <div
+            class="inline-flex mx-auto justify-center items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+          >
+            <div class="slide-container" @click="toggleSlide">
+              <div
+                id="slide"
+                class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5"
+                :class="{ 'slide-right': isSlideRight }"
+              >
+                <img class="w-6 h-6" src="./public/arrowleft.svg" />
+              </div>
+              <span
+                class="text-xl font-medium"
+                :class="{ 'hide-text': isSlideRight }"
+                >Commencez l'aventure maintenant !</span
+              >
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+  <!--Hero3-->
+  <section class="bg-white dark:bg-gray-900">
+    <div class="grid lg:mt-0 lg:grid-cols-12">
+      <div class="py-8 max-w-screen-xl text-center lg:col-span-7">
+        <h1
+          class="mb-4 text-xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-4xl dark:text-white"
+        >
+          Une <span style="color: #7e22ce"> gestion</span> simplifié
+          <!-- Révolutionnez l'expérience de commande de votre restaurant -->
+        </h1>
+        <p
+          class="mb-8 text-lg font-normal text-center text-gray-500 lg:text-xl sm:px-4 xl:px-4 dark:text-gray-400"
+        >
+          Le système de gestion que nous avons choisi de développer constitue le
+          pilier central de votre stratégie d'entreprise.<br /><br />
+          En plaçant notre solution au cœur de votre activité, vous bénéficiez
+          d'un outil puissant et adapté qui optimisera vos opérations et
+          renforcera votre efficacité.
+        </p>
+      </div>
+
+      <div class="lg:col-span-3">
+        <img class="max-w-full h-auto" src="./public/appscreen.svg" />
       </div>
     </div>
   </section>
@@ -685,4 +734,30 @@ const stats = [
   { id: 3, name: "New users annually", value: "46,000" },
 ];
 const mobileMenuOpen = ref(false);
+
+const isSlideRight = ref(false);
+
+function toggleSlide() {
+  isSlideRight.value = !isSlideRight.value;
+}
 </script>
+
+<style>
+.slide-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+#slide {
+  transition: transform 0.5s;
+}
+
+.slide-right {
+  transform: translateX(600%);
+}
+.hide-text {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+</style>
