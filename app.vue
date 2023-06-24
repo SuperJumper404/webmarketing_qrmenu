@@ -114,7 +114,7 @@
   <!-- hero -->
   <section class="bg-white dark:bg-gray-900">
     <div class="grid lg:mt-0 lg:grid-cols-12">
-      <div class="py-8 max-w-screen-xl text-center lg:col-span-7">
+      <div class="py-32 max-w-screen-xl text-center lg:col-span-7">
         <h1
           class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
         >
@@ -126,7 +126,8 @@
           class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-4 xl:px-4 dark:text-gray-400"
         >
           Une interface conviviale, des menus interactifs et des options de
-          personnalisation avancées, le tout à portée de main.
+          personnalisation <br />
+          avancées, le tout à portée de main.
         </p>
         <div
           class="block flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
@@ -205,6 +206,7 @@
             <div class="slide-container" @click="toggleSlide">
               <div
                 id="slide"
+                style="margin-right: 1em"
                 class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5"
                 :class="{ 'slide-right': isSlideRight }"
               >
@@ -224,26 +226,26 @@
   <!--Hero3-->
   <section class="bg-white dark:bg-gray-900">
     <div class="grid lg:mt-0 lg:grid-cols-12">
-      <div class="py-8 max-w-screen-xl text-center lg:col-span-7">
+      <div class="py-8 max-w-screen-xl text-center lg:col-span-6">
         <h1
-          class="mb-4 text-xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-4xl dark:text-white"
+          class="max-w-5xl mb-4 ml-16 text-4xl font-extrabold text-center tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
         >
           Une <span style="color: #7e22ce"> gestion</span> simplifié
           <!-- Révolutionnez l'expérience de commande de votre restaurant -->
         </h1>
         <p
-          class="mb-8 text-lg font-normal text-center text-gray-500 lg:text-xl sm:px-4 xl:px-4 dark:text-gray-400"
+          class="mb-8 text-lg font-normal text-center text-gray-500 lg:text-xl sm:px-4 xl:px-32 dark:text-gray-400"
         >
           Le système de gestion que nous avons choisi de développer constitue le
-          pilier central de votre stratégie d'entreprise.<br /><br />
-          En plaçant notre solution au cœur de votre activité, vous bénéficiez
-          d'un outil puissant et adapté qui optimisera vos opérations et
-          renforcera votre efficacité.
+          pilier central de votre stratégie d'entreprise. En plaçant notre
+          solution au cœur de votre activité, vous bénéficiez d'un outil
+          puissant et adapté qui optimisera vos opérations et renforcera votre
+          efficacité.
         </p>
       </div>
 
-      <div class="lg:col-span-3">
-        <img class="max-w-full h-auto" src="./public/appscreen.svg" />
+      <div class="lg:col-span-6">
+        <img src="./public/appscreen.svg" />
       </div>
     </div>
   </section>
@@ -739,6 +741,9 @@ const isSlideRight = ref(false);
 
 function toggleSlide() {
   isSlideRight.value = !isSlideRight.value;
+  setTimeout(() => {
+    isSlideRight.value = false;
+  }, 3000);
 }
 </script>
 
@@ -754,7 +759,7 @@ function toggleSlide() {
 }
 
 .slide-right {
-  transform: translateX(600%);
+  transform: translateX(620%);
 }
 .hide-text {
   opacity: 0;
