@@ -164,7 +164,7 @@
         class="grid max-w-screen-4xl py-8 mx-auto xl:gap-0 lg:py-4 lg:grid-cols-12"
       >
         <div class="lg:col-span-5">
-          <img src="./public/qrappmenu2.png" />
+          <img class="hidden sm:block" src="./public/qrappmenu2.png" />
         </div>
         <div class="place-self-center grid lg:col-span-7">
           <h1
@@ -234,7 +234,7 @@
           <!-- Révolutionnez l'expérience de commande de votre restaurant -->
         </h1>
         <p
-          class="mb-8 text-lg font-normal text-center text-gray-500 lg:text-xl sm:px-8 xl:px-16 dark:text-gray-400"
+          class="mb-8 text-lg font-normal text-center text-gray-500 lg:text-xl sm:px-8 xl:px-8 dark:text-gray-400"
         >
           Le système de gestion que nous avons choisi de développer constitue le
           pilier central de votre stratégie d'entreprise. En plaçant notre
@@ -242,23 +242,27 @@
           puissant et adapté qui optimisera vos opérations et renforcera votre
           efficacité.
         </p>
-        <div
-          class="mx-auto text-left mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl"
-        >
-          <div class="flex flex-col max-w-xl g gap-x-8 gap-y-10 lg:max-w-none">
+        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+          <div class="flex flex-col max-w-xl gap-x-8 gap-y-10 lg:max-w-none">
             <div
               v-for="feature in features"
               :key="feature.name"
               class="grid lg:grid-cols-12"
             >
-              <div class="lg:col-span-5 flex justify-end pr-16">
-                <img :src="feature.imgPath" alt="" />
+              <div
+                class="lg:col-span-5 flex justify-center items-center sm:col-span-5"
+              >
+                <img :src="feature.imgPath" alt="" class="max-w-full h-auto" />
               </div>
-              <div class="lg:col-span-5 w-[432px]">
-                <div class="text-xl font-semibold leading-7 text-gray-900">
+              <div class="lg:col-span-5 lg:w-[432px] sm:mx-auto">
+                <div
+                  class="text-xl sm:text-center lg:text-left font-semibold leading-7 text-gray-900"
+                >
                   {{ feature.name }}
                 </div>
-                <div class="mt-2 text-base leading-7 text-gray-600">
+                <div
+                  class="mt-2 text-base sm:text-center lg:text-left leading-7 text-gray-600"
+                >
                   {{ feature.description }}
                 </div>
               </div>
