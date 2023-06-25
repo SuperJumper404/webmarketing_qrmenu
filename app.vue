@@ -224,17 +224,17 @@
     </div>
   </section>
   <!--Hero3-->
-  <section class="bg-white dark:bg-gray-900">
+  <section class="bg-white h-auto dark:bg-gray-900">
     <div class="grid lg:mt-0 lg:grid-cols-12">
-      <div class="py-8 max-w-screen-xl text-center lg:col-span-6">
+      <div class="py-8 max-w-screen-xl text-center lg:col-span-5">
         <h1
-          class="max-w-5xl mb-4 ml-16 text-4xl font-extrabold text-center tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
+          class="max-w-5xl mb-4 mx-auto text-4xl font-extrabold text-center tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
         >
           Une <span style="color: #7e22ce"> gestion</span> simplifié
           <!-- Révolutionnez l'expérience de commande de votre restaurant -->
         </h1>
         <p
-          class="mb-8 text-lg font-normal text-center text-gray-500 lg:text-xl sm:px-4 xl:px-32 dark:text-gray-400"
+          class="mb-8 text-lg font-normal text-center text-gray-500 lg:text-xl sm:px-8 xl:px-16 dark:text-gray-400"
         >
           Le système de gestion que nous avons choisi de développer constitue le
           pilier central de votre stratégie d'entreprise. En plaçant notre
@@ -242,10 +242,36 @@
           puissant et adapté qui optimisera vos opérations et renforcera votre
           efficacité.
         </p>
+        <div
+          class="mx-auto text-left mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl"
+        >
+          <div class="flex flex-col max-w-xl g gap-x-8 gap-y-10 lg:max-w-none">
+            <div
+              v-for="feature in features"
+              :key="feature.name"
+              class="grid lg:grid-cols-12"
+            >
+              <div class="lg:col-span-5 flex justify-end pr-16">
+                <img :src="feature.imgPath" alt="" />
+              </div>
+              <div class="lg:col-span-5 w-[432px]">
+                <div class="text-xl font-semibold leading-7 text-gray-900">
+                  {{ feature.name }}
+                </div>
+                <div class="mt-2 text-base leading-7 text-gray-600">
+                  {{ feature.description }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="lg:col-span-6">
-        <img src="./public/appscreen.svg" />
+      <div class="lg:col-span-7 py-32">
+        <img
+          class="max-w-full h-auto w-1/1 mx-auto"
+          src="./public/appscreen.svg"
+        />
       </div>
     </div>
   </section>
@@ -706,28 +732,22 @@ const callsToAction = [
 ];
 const features = [
   {
-    name: "Push to deploy",
+    name: "Prise de commande",
     description:
-      "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
-    icon: CloudArrowUpIcon,
+      "Notre système de gestion des commandes en temps réel vous permettra de suivre facilement les demandes, d’optimiser l’efficacité opérationnelle et de grantir une livraison rapide.",
+    imgPath: "/prisedecommande.svg",
   },
   {
-    name: "SSL certificates",
+    name: "Inventaire des stocks",
     description:
-      "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
-    icon: LockClosedIcon,
+      "Notre application vous offre une solution complète pour la gestion de l'inventaire des stocks, vous permettant ainsi d'avoir une vision claire et précise des produits disponibles.",
+    imgPath: "/inventaire.svg",
   },
   {
-    name: "Simple queues",
+    name: "Menu personnalisable",
     description:
-      "Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Advanced security",
-    description:
-      "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
-    icon: FingerPrintIcon,
+      "Une interface conviviale et intuitive pour personnaliser votre menu simplement.  Modifiez vos plats, intégrer de nouvelles options, spécifier les ingrédients souhaités ou encore concevoir des menus sur mesure.",
+    imgPath: "/menupersonnalisable.svg",
   },
 ];
 const stats = [
