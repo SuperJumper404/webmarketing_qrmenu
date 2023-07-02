@@ -114,7 +114,7 @@
   <!-- hero -->
   <section class="bg-white dark:bg-gray-900">
     <div class="grid lg:mt-0 lg:grid-cols-12">
-      <div class="py-32 max-w-screen-xl text-center lg:col-span-7">
+      <div class="lg:py-32 max-w-screen-xl text-center lg:col-span-7">
         <h1
           class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
         >
@@ -213,7 +213,7 @@
                 <img class="w-6 h-6" src="./public/arrowleft.svg" />
               </div>
               <span
-                class="text-xl font-medium"
+                class="lg:text-xl sm:text-lg font-medium"
                 :class="{ 'hide-text': isSlideRight }"
                 >Commencez l'aventure maintenant !</span
               >
@@ -228,20 +228,20 @@
     <div class="grid lg:mt-0 lg:grid-cols-12">
       <div class="py-8 max-w-screen-xl text-center lg:col-span-5">
         <h1
-          class="max-w-5xl mb-4 mx-auto text-4xl font-extrabold text-center tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
+          class="max-w-full min-w-max px-8 mb-4 mx-auto text-4xl font-extrabold text-center tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
         >
           Une <span style="color: #7e22ce"> gestion</span> simplifié
           <!-- Révolutionnez l'expérience de commande de votre restaurant -->
         </h1>
-        <p
-          class="mb-8 text-lg font-normal text-center text-gray-500 lg:text-xl sm:px-8 xl:px-8 dark:text-gray-400"
+        <div
+          class="mb-4 mx-auto ml-10 text-lg font-extralight text-center text-gray-500 lg:text-lg sm:px-8 dark:text-gray-400"
         >
           Le système de gestion que nous avons choisi de développer constitue le
           pilier central de votre stratégie d'entreprise. En plaçant notre
           solution au cœur de votre activité, vous bénéficiez d'un outil
           puissant et adapté qui optimisera vos opérations et renforcera votre
           efficacité.
-        </p>
+        </div>
         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
           <div class="flex flex-col max-w-xl gap-x-8 gap-y-10 lg:max-w-none">
             <div
@@ -250,18 +250,18 @@
               class="grid lg:grid-cols-12"
             >
               <div
-                class="lg:col-span-5 flex justify-center items-center sm:col-span-5"
+                class="lg:col-span-4 flex justify-center items-center sm:col-span-5"
               >
                 <img :src="feature.imgPath" alt="" class="max-w-full h-auto" />
               </div>
-              <div class="lg:col-span-5 lg:w-[432px] sm:mx-auto">
+              <div class="lg:col-span-54 lg:w-[21rem] md:w-[340px] sm:mx-auto">
                 <div
                   class="text-xl sm:text-center lg:text-left font-semibold leading-7 text-gray-900"
                 >
                   {{ feature.name }}
                 </div>
                 <div
-                  class="mt-2 text-base sm:text-center lg:text-left leading-7 text-gray-600"
+                  class="mt-2 text-sm sm:text-center lg:text-left leading-7 text-gray-600"
                 >
                   {{ feature.description }}
                 </div>
@@ -273,7 +273,7 @@
 
       <div class="lg:col-span-7 py-32">
         <img
-          class="max-w-full h-auto w-1/1 mx-auto"
+          class="max-w-full h-auto w-1/1 mx-auto lg:py-16 md:py-16"
           src="./public/appscreen.svg"
         />
       </div>
@@ -738,7 +738,7 @@ const features = [
   {
     name: "Prise de commande",
     description:
-      "Notre système de gestion des commandes en temps réel vous permettra de suivre facilement les demandes, d’optimiser l’efficacité opérationnelle et de grantir une livraison rapide.",
+      "Notre système de gestion des commandes en temps réel vous permettra de suivre facilement les demandes, d’optimiser l’efficacité opérationnelle et de garantir une livraison rapide.",
     imgPath: "/prisedecommande.svg",
   },
   {
