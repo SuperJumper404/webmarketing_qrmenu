@@ -225,8 +225,8 @@
   </section>
   <!--Hero3-->
   <section class="bg-white h-auto dark:bg-gray-900">
-    <div class="grid lg:mt-0 lg:grid-cols-12">
-      <div class="py-8 max-w-screen-xl text-center lg:col-span-5">
+    <div class="grid lg:mt-8 lg:grid-cols-12">
+      <div class="max-w-screen-xl text-center lg:col-span-6">
         <h1
           class="max-w-full min-w-max px-8 mb-4 mx-auto text-4xl font-extrabold text-center tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
         >
@@ -234,7 +234,7 @@
           <!-- Révolutionnez l'expérience de commande de votre restaurant -->
         </h1>
         <div
-          class="mb-4 mx-auto ml-10 text-lg font-extralight text-center text-gray-500 lg:text-lg sm:px-8 dark:text-gray-400"
+          class="text-lg px-8 font-extralight text-center lg:col-span-4 text-gray-500 lg:text-lg dark:text-gray-400"
         >
           Le système de gestion que nous avons choisi de développer constitue le
           pilier central de votre stratégie d'entreprise. En plaçant notre
@@ -242,7 +242,11 @@
           puissant et adapté qui optimisera vos opérations et renforcera votre
           efficacité.
         </div>
-        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+      </div>
+    </div>
+    <div class="grid lg:mt-0 lg:grid-cols-12">
+      <div class="max-w-screen-xl text-center lg:col-span-5">
+        <div class="mx-auto mt-8 max-w-2xl sm:mt-20 lg:mt-16 lg:max-w-4xl">
           <div class="flex flex-col max-w-xl gap-x-8 gap-y-10 lg:max-w-none">
             <div
               v-for="feature in features"
@@ -250,11 +254,11 @@
               class="grid lg:grid-cols-12"
             >
               <div
-                class="lg:col-span-4 flex justify-center items-center sm:col-span-5"
+                class="lg:col-span-5 flex justify-center items-center sm:col-span-5"
               >
                 <img :src="feature.imgPath" alt="" class="max-w-full h-auto" />
               </div>
-              <div class="lg:col-span-54 lg:w-[21rem] md:w-[340px] sm:mx-auto">
+              <div class="lg:col-span-54 lg:w-[19rem] md:w-[340px] sm:mx-auto">
                 <div
                   class="text-xl sm:text-center lg:text-left font-semibold leading-7 text-gray-900"
                 >
@@ -271,7 +275,7 @@
         </div>
       </div>
 
-      <div class="lg:col-span-7 py-32">
+      <div class="lg:col-span-7">
         <img
           class="max-w-full h-auto w-1/1 mx-auto lg:py-16 md:py-16"
           src="./public/appscreen.svg"
@@ -788,5 +792,10 @@ function toggleSlide() {
 .hide-text {
   opacity: 0;
   transition: opacity 0.3s;
+}
+
+.half-max-content {
+  width: max-content;
+  transform: scaleX(0.5);
 }
 </style>
