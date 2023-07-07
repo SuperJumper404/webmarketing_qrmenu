@@ -287,192 +287,150 @@
   <section>
     <div data-aos="fade-down">
       <div>
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl lg:text-center">
-            <h2 class="text-base font-semibold leading-7 text-indigo-600">
-              Deploy faster
-            </h2>
-            <p
-              class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-            >
-              Everything you need to deploy your app
-            </p>
-            <p class="mt-6 text-lg leading-8 text-gray-600">
-              Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-              Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-              at. In mi viverra elit nunc.
-            </p>
-          </div>
-          <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-            <dl
-              class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"
+        <div class="mx-auto">
+          <div class="px-16 py-4">
+            <div
+              class="flex max-w-full justify-around self-center gap-x-8 gap-y-10 grid-cols-auto lg:gap-y-16"
             >
               <div
-                v-for="feature in features"
+                v-for="feature in features_bottom"
                 :key="feature.name"
-                class="relative pl-16"
+                class="flex flex-col items-center self-baseline lg:items-start"
               >
-                <dt class="text-base font-semibold leading-7 text-gray-900">
+                <div class="flex justify-center self-center items-center">
+                  <img
+                    :src="feature.imgPath"
+                    alt=""
+                    class="max-w-full h-auto"
+                  />
+                </div>
+                <div class="mt-4 lg:w-[19rem] md:w-[340px]">
                   <div
-                    class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600"
+                    class="text-xl text-center lg:text-center font-semibold leading-7 text-gray-900"
                   >
-                    <component
-                      :is="feature.icon"
-                      class="h-6 w-6 text-white"
-                      aria-hidden="true"
-                    />
+                    {{ feature.name }}
                   </div>
-                  {{ feature.name }}
-                </dt>
-                <dd class="mt-2 text-base leading-7 text-gray-600">
-                  {{ feature.description }}
-                </dd>
+                  <div
+                    class="mt-2 text-sm text-center lg:text-center leading-7 text-gray-600"
+                  >
+                    {{ feature.description }}
+                  </div>
+                </div>
               </div>
-            </dl>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- stats -->
-  <section>
-    <div data-aos="fade-left">
-      <div class="bg-white py-24 sm:py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <dl
-            class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3"
-          >
-            <div
-              v-for="stat in stats"
-              :key="stat.id"
-              class="mx-auto flex max-w-xs flex-col gap-y-4"
-            >
-              <dt class="text-base leading-7 text-gray-600">{{ stat.name }}</dt>
-              <dd
-                class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
-              >
-                {{ stat.value }}
-              </dd>
             </div>
-          </dl>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- Testimonials -->
-  <section
-    class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8"
-  >
-    <div
-      class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20"
-    />
-    <div
-      class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"
-    />
-    <div class="mx-auto max-w-2xl lg:max-w-4xl">
-      <img
-        class="mx-auto h-12"
-        src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg"
-        alt=""
-      />
-      <figure class="mt-10">
-        <blockquote
-          class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9"
-        >
-          <p>
-            “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-            expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
-            in laborum sed rerum et corporis.”
-          </p>
-        </blockquote>
-        <figcaption class="mt-10">
-          <img
-            class="mx-auto h-10 w-10 rounded-full"
-            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            alt=""
-          />
-          <div
-            class="mt-4 flex items-center justify-center space-x-3 text-base"
-          >
-            <div class="font-semibold text-gray-900">Judith Black</div>
-            <svg
-              viewBox="0 0 2 2"
-              width="3"
-              height="3"
-              aria-hidden="true"
-              class="fill-gray-900"
-            >
-              <circle cx="1" cy="1" r="1" />
-            </svg>
-            <div class="text-gray-600">CEO of Workcation</div>
-          </div>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
+  <!--  -->
+
   <!-- contact -->
   <section class="bg-white dark:bg-gray-900">
-    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-      <h2
-        class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white"
-      >
-        Contact Us
-      </h2>
-      <p
-        class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl"
-      >
-        Got a technical issue? Want to send feedback about a beta feature? Need
-        details about our Business plan? Let us know.
-      </p>
-      <form action="#" class="space-y-8">
-        <div>
-          <label
-            for="email"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-            >Your email</label
-          >
-          <input
-            type="email"
-            id="email"
-            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-            placeholder="name@flowbite.com"
-            required
-          />
-        </div>
-        <div>
-          <label
-            for="subject"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-            >Subject</label
-          >
-          <input
-            type="text"
-            id="subject"
-            class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-            placeholder="Let us know how we can help you"
-            required
-          />
-        </div>
-        <div class="sm:col-span-2">
-          <label
-            for="message"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
-            >Your message</label
-          >
-          <textarea
-            id="message"
-            rows="6"
-            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-            placeholder="Leave a comment..."
-          ></textarea>
-        </div>
-        <button
-          type="submit"
-          class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+    <div class="grid lg:mt-0 lg:grid-cols-12">
+      <div class="lg:col-span-5">
+        <div
+          class="mx-auto my-auto py-32 flex justify-center items-center h-full"
         >
-          Send messages
-        </button>
-      </form>
+          <div class="text-center">
+            <div
+              class="mb-4 text-4xl font-extrabold text-left tracking-tight leading-none md:text-xl xl:text-xl dark:text-white"
+            >
+              <div class="flex items-center">
+                <div>
+                  <img src="https://picsum.photos/50/50" alt="Random Image" />
+                </div>
+                <div class="ml-4">
+                  <h1>Email</h1>
+                  <span class="font-medium text-xl">contact@scaneat.com</span>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div>
+                  <img src="https://picsum.photos/50/50" alt="Random Image" />
+                </div>
+                <div class="ml-4">
+                  <h1>WhatsApp</h1>
+                  <span class="font-medium text-xl">contact@scaneat.com</span>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div>
+                  <img src="https://picsum.photos/50/50" alt="Random Image" />
+                </div>
+                <div class="ml-4">
+                  <h1>Instagram</h1>
+                  <span class="font-medium text-xl">contact@scaneat.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-7">
+        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+          <h2
+            class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white"
+          >
+            Contactez-Nous
+          </h2>
+          <p
+            class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl"
+          >
+            Programmer un entretien ? Une demonstration ? <br />Besoin
+            d'informations supplementaires ? Néhistez pas !
+          </p>
+          <form action="#" class="space-y-8">
+            <div>
+              <label
+                for="email"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                placeholder="votre@email.com"
+                required
+              />
+            </div>
+            <div>
+              <label
+                for="subject"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >Téléphone
+              </label>
+              <input
+                type="text"
+                id="subject"
+                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                placeholder="+33 XX XX XX XX"
+                required
+              />
+            </div>
+            <div class="sm:col-span-2">
+              <label
+                for="message"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                rows="6"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                placeholder="Comment pouvons-nous vous aidez ?"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            >
+              Envoyer
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
   <!-- Footer -->
@@ -756,6 +714,26 @@ const features = [
     description:
       "Une interface conviviale et intuitive pour personnaliser votre menu simplement.  Modifiez vos plats, intégrer de nouvelles options, spécifier les ingrédients souhaités ou encore concevoir des menus sur mesure.",
     imgPath: "/menupersonnalisable.svg",
+  },
+];
+const features_bottom = [
+  {
+    name: "Suivi de preparation ",
+    description:
+      "Grâce à cette fonction intégré, vous serez en mesure d'informer vos clients à chaque étape du processus, depuis la prise de commande jusqu'à la préparation et au service.",
+    imgPath: "/robot_server.svg",
+  },
+  {
+    name: "Plan de table",
+    description:
+      "Avec cette fonctionnalité, vous pouvez facilement créer et organiser votre plan de table en attribuant des QR codes uniques à chaque table. ",
+    imgPath: "/tableplan.svg",
+  },
+  {
+    name: "Tableau de board",
+    description:
+      "Un tableau de bord complet offrant une vue d'ensemble de votre entreprise en temps réel. Des indicateurs clés pour prendre des décisions éclairées, basées sur des données précises et optimiser vos performances.",
+    imgPath: "/dashbord.svg",
   },
 ];
 const stats = [
