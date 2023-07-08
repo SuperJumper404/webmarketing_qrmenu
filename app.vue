@@ -334,33 +334,35 @@
         >
           <div class="text-center">
             <div
-              class="mb-4 text-4xl font-extrabold text-left tracking-tight leading-none md:text-xl xl:text-xl dark:text-white"
+              class="mb-4 py-32 text-4xl font-extrabold text-left tracking-tight leading-none md:text-xl xl:text-xl dark:text-white"
             >
-              <div class="flex items-center">
+              <div class="flex items-center py-4">
                 <div>
-                  <img src="https://picsum.photos/50/50" alt="Random Image" />
+                  <img src="/email_icon.svg" />
                 </div>
                 <div class="ml-4">
                   <h1>Email</h1>
                   <span class="font-medium text-xl">contact@scaneat.com</span>
                 </div>
               </div>
-              <div class="flex items-center">
+              <div class="flex items-center py-4">
                 <div>
-                  <img src="https://picsum.photos/50/50" alt="Random Image" />
+                  <img src="/whatapp_icon.svg" />
                 </div>
                 <div class="ml-4">
                   <h1>WhatsApp</h1>
-                  <span class="font-medium text-xl">contact@scaneat.com</span>
+                  <span class="font-medium text-xl">07.78.95.23.31</span>
+                  <br />
+                  <span class="font-medium text-xl">06.71.32.57.61</span>
                 </div>
               </div>
-              <div class="flex items-center">
+              <div class="flex items-center py-4">
                 <div>
-                  <img src="https://picsum.photos/50/50" alt="Random Image" />
+                  <img src="instagram_icon.svg" />
                 </div>
                 <div class="ml-4">
                   <h1>Instagram</h1>
-                  <span class="font-medium text-xl">contact@scaneat.com</span>
+                  <span class="font-medium text-xl">scan_eat</span>
                 </div>
               </div>
             </div>
@@ -433,8 +435,21 @@
       </div>
     </div>
   </section>
-  <!-- Footer -->
-
+  <!-- FAQ -->
+  <section class="bg-white dark:bg-gray-900">
+    <div class="grid lg:mt-0 lg:grid-cols-12">
+      <div class="lg:col-span-5">
+        <div class="mx-auto my-auto flex justify-center items-center h-full">
+          <h1
+            class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+          >
+            Foire Aux Questions ?
+            <!-- Révolutionnez l'expérience de commande de votre restaurant -->
+          </h1>
+        </div>
+      </div>
+    </div>
+  </section>
   <section>
     <footer class="p-4 bg-white sm:p-6 dark:bg-gray-800">
       <div class="mx-auto max-w-screen-xl">
