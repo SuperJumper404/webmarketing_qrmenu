@@ -290,7 +290,7 @@
         <div class="mx-auto">
           <div class="px-16 py-4">
             <div
-              class="flex max-w-full justify-around self-center gap-x-8 gap-y-10 grid-cols-auto lg:gap-y-16"
+              class="flex flex-col lg:flex-row max-w-full justify-around self-center gap-x-8 gap-y-10 grid-cols-auto lg:gap-y-16"
             >
               <div
                 v-for="feature in features_bottom"
@@ -330,11 +330,11 @@
     <div class="grid lg:mt-0 lg:grid-cols-12">
       <div class="lg:col-span-5">
         <div
-          class="mx-auto my-auto py-32 flex justify-center items-center h-full"
+          class="mx-auto my-auto lg:py-32 flex justify-center items-center h-full"
         >
           <div class="text-center">
             <div
-              class="mb-4 py-32 text-4xl font-extrabold text-left tracking-tight leading-none md:text-xl xl:text-xl dark:text-white"
+              class="mb-4 lg:py-32 text-4xl font-extrabold text-left tracking-tight leading-none md:text-xl xl:text-xl dark:text-white"
             >
               <div class="flex items-center py-4">
                 <div>
@@ -370,7 +370,7 @@
         </div>
       </div>
       <div class="lg:col-span-7">
-        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+        <div class="lg:py-16 px-4 mx-auto max-w-screen-md">
           <h2
             class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white"
           >
@@ -438,14 +438,68 @@
   <!-- FAQ -->
   <section class="bg-white dark:bg-gray-900">
     <div class="grid lg:mt-0 lg:grid-cols-12">
-      <div class="lg:col-span-5">
-        <div class="mx-auto my-auto flex justify-center items-center h-full">
+      <div class="lg:col-span-12 py-8 lg:py-0">
+        <div
+          class="mx-auto my-auto sm:py-8 flex justify-center items-center h-full"
+        >
           <h1
             class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
           >
-            Foire Aux Questions ?
+            Questions <span style="color: #7e22ce">& </span> Réponses
             <!-- Révolutionnez l'expérience de commande de votre restaurant -->
           </h1>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="grid lg:mt-0 lg:grid-cols-12">
+        <div class="lg:col-span-6">
+          <div
+            v-for="question in questions"
+            :key="question.id"
+            class="flex items-center justify-center py-4 mx-5"
+            @mouseenter="playAnimation(question)"
+            @mouseleave="stopAnimation(question)"
+          >
+            <div>
+              <lottie-player
+                autoplay
+                :id="`lottie-${question.id}`"
+                style="width: 45px"
+                :src="question.icon_src"
+                speed="2"
+                debug
+              ></lottie-player>
+            </div>
+            <div class="ml-4">
+              <h1 class="font-medium text-lg">{{ question.question }}</h1>
+              <span>{{ question.answer }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-6">
+          <div
+            v-for="question in questions2"
+            :key="question.id"
+            class="flex items-center justify-center py-4 mx-5"
+            @mouseenter="playAnimation(question)"
+            @mouseleave="stopAnimation(question)"
+          >
+            <div>
+              <lottie-player
+                autoplay
+                :id="`lottie-${question.id}`"
+                style="width: 45px"
+                :src="question.icon_src"
+                speed="2"
+                debug
+              ></lottie-player>
+            </div>
+            <div class="ml-4">
+              <h1 class="font-medium text-lg">{{ question.question }}</h1>
+              <span>{{ question.answer }}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -631,6 +685,18 @@ import { ref } from "vue";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
+function playAnimation(question) {
+  const lottiePlayer = document.getElementById(`lottie-${question.id}`);
+  if (lottiePlayer) {
+    lottiePlayer.play();
+  }
+}
+function stopAnimation(question) {
+  const lottiePlayer = document.getElementById(`lottie-${question.id}`);
+  if (lottiePlayer) {
+    lottiePlayer.stop();
+  }
+}
 AOS.init({
   offset: 120, // offset (in px) from the original trigger point
   delay: 5, // values from 0 to 3000, with step 50ms
@@ -755,6 +821,72 @@ const stats = [
   { id: 1, name: "Transactions every 24 hours", value: "44 million" },
   { id: 2, name: "Assets under holding", value: "$119 trillion" },
   { id: 3, name: "New users annually", value: "46,000" },
+];
+const questions = [
+  {
+    id: 1,
+    icon_src: "/lottie/system-solid-141-history.json",
+    question: "Quel est le délai de mise en place de l'application ?",
+    answer:
+      "Une fois que nous aurons convenu d'un rendez-vous, nous aurons seulement besoin de 2 heures pour vous montrer comment l'application fonctionne et répondre à toutes vos questions.",
+  },
+  {
+    id: 2,
+    icon_src: "/lottie/system-solid-58-call-phone.json",
+    question: "Est-ce qu'un support technique est disponible ?",
+    answer:
+      "Absolument ! Notre équipe de support technique est disponible à tout moment. Il vous suffit de nous contacter via le numéro dédié au support technique, et nous serons là pour répondre à toutes vos questions.",
+  },
+
+  {
+    id: 4,
+    icon_src: "/lottie/system-solid-47-chat.json",
+    question:
+      "Les clients peuvent-ils ajouter des commentaires à leur commande ?",
+    answer:
+      "Oui, vos clients peuvent ajouter des commentaires à leur commande s'ils le souhaitent. Ils pourront ainsi fournir des précisions ou des instructions spéciales, le cas échéant.",
+  },
+
+  {
+    id: 8,
+    icon_src: "/lottie/system-solid-45-category.json",
+    question:
+      "Est-il possible de personnaliser l'application avec mon logo et mes couleurs ?",
+    answer:
+      "Oui, vous pouvez personnaliser l'application en ajoutant votre logo et en choisissant les couleurs qui représentent votre marque. Cela donnera à l'application une apparence professionnelle et cohérente avec votre identité visuelle.",
+  },
+];
+const questions2 = [
+  {
+    id: 6,
+    icon_src: "/lottie/system-solid-34-code.json",
+    question:
+      "Est-ce que je bénéficierai des nouveautés lors des mises à jour ?",
+    answer:
+      "Absolument ! Chaque fois que nous développons de nouvelles fonctionnalités ou effectuons une mise à jour, nous vous informons de sa disponibilité. Vous pourrez ainsi profiter de ces nouveautés.",
+  },
+  {
+    id: 7,
+    icon_src: "/lottie/system-solid-14-article.json",
+    question: "Puis-je mettre à jour mon menu facilement ?",
+    answer:
+      "Bien sûr ! Mettre à jour votre menu est très simple. Une fois que vous aurez effectué les modifications nécessaires, celles-ci seront instantanément visibles dans l'application.",
+  },
+  {
+    id: 5,
+    icon_src: "/lottie/system-solid-160-trending-up.json",
+    question: "Quel est le nombre maximum de tables pouvant être ajoutées ?",
+    answer:
+      "Il n'y a aucune limite ! Vous pouvez ajouter autant de tables que vous le souhaitez dans l'application, en fonction de la capacité de votre restaurant. Il suffira creer et de deposer le nouveau Qr code sur la table.",
+  },
+  {
+    id: 9,
+    icon_src: "/lottie/system-solid-43-pie-chart-diagram.json",
+    question:
+      "Puis-je accéder aux statistiques de vente et aux données des clients ?",
+    answer:
+      "Absolument ! L'application fournit des statistiques détaillées sur vos ventes, telles que le chiffre d'affaires, les produits les plus populaires et les tendances de consommation. ",
+  },
 ];
 const mobileMenuOpen = ref(false);
 

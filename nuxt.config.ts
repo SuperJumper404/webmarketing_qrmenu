@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     modules: [
       '@nuxtjs/tailwindcss'
     ],
+    plugins: [{ src: "~/plugins/lottie-player.js", mode: "client" }],
     tailwindcss: {
       cssPath: '~/assets/css/tailwind.css',
       configPath: 'tailwind.config',
