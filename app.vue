@@ -358,7 +358,7 @@
               </div>
               <div class="flex items-center py-4">
                 <div>
-                  <img src="instagram_icon.svg" />
+                  <img src="/instagram_icon.svg" />
                 </div>
                 <div class="ml-4">
                   <h1>Instagram</h1>
