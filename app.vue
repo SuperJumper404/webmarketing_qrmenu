@@ -9,9 +9,10 @@
         <div class="flex lg:flex-1">
           <a href="#" class="-m-1.5 p-1.5">
             <img
-              class="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              class="lg:h-20 w-auto h-16"
+              src="/logo.png"
               alt=""
+              style="position: absolute; top: 10px; left: 10px"
             />
           </a>
         </div>
@@ -26,17 +27,17 @@
           </button>
         </div>
         <PopoverGroup class="hidden lg:flex lg:gap-x-12">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+          <a href="#" class="text-lg font-semibold leading-6 text-gray-900"
             >Produit</a
           >
 
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+          <a href="#" class="text-lg font-semibold leading-6 text-gray-900"
             >Solutions</a
           >
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+          <a href="#" class="text-lg font-semibold leading-6 text-gray-900"
             >Contact</a
           >
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+          <a href="#" class="text-lg font-semibold leading-6 text-gray-900"
             >FAQ</a
           >
         </PopoverGroup>
@@ -351,9 +352,10 @@
                 </div>
                 <div class="ml-4">
                   <h1>WhatsApp</h1>
-                  <span class="font-medium text-xl">07.78.95.23.31</span>
-                  <br />
                   <span class="font-medium text-xl">06.71.32.57.61</span>
+
+                  <br />
+                  <span class="font-medium text-xl">07.78.95.23.31</span>
                 </div>
               </div>
               <div class="flex items-center py-4">
@@ -504,20 +506,17 @@
       </div>
     </div>
   </section>
+  <!-- FOOTER-->
   <section>
     <footer class="p-4 bg-white sm:p-6 dark:bg-gray-800">
       <div class="mx-auto max-w-screen-xl">
-        <div class="md:flex md:justify-between">
-          <div class="mb-6 md:mb-0">
-            <a href="https://flowbite.com" class="flex items-center">
-              <img
-                src="https://flowbite.com/docs/images/logo.svg"
-                class="mr-3 h-8"
-                alt="FlowBite Logo"
-              />
+        <div class="flex md:flex md:justify-between">
+          <div class="md:mb-0">
+            <a href="/logo.jpg" class="flex items-center">
+              <img src="/logo.jpg" class="mr-3 h-12" />
               <span
-                class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-                >Flowbite</span
+                class="text-3xl font-semibold whitespace-nowrap dark:text-white"
+                >ScanEat</span
               >
             </a>
           </div>
@@ -586,9 +585,9 @@
         />
         <div class="sm:flex sm:items-center sm:justify-between">
           <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
-            >© 2022
-            <a href="https://flowbite.com" class="hover:underline">Flowbite™</a
-            >. All Rights Reserved.
+            >© 2023
+            <a href="https://flowbite.com" class="hover:underline">ScanEat</a>.
+            Tous droits réservés
           </span>
           <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a
