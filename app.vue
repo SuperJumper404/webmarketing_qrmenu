@@ -27,17 +27,23 @@
           </button>
         </div>
         <PopoverGroup class="hidden lg:flex lg:gap-x-12">
-          <a href="#" class="text-lg font-semibold leading-6 text-gray-900"
+          <a
+            href="#produit"
+            class="text-lg font-semibold leading-6 text-gray-900"
             >Produit</a
           >
 
-          <a href="#" class="text-lg font-semibold leading-6 text-gray-900"
+          <a
+            href="#solution"
+            class="text-lg font-semibold leading-6 text-gray-900"
             >Solutions</a
           >
-          <a href="#" class="text-lg font-semibold leading-6 text-gray-900"
+          <a
+            href="#contact"
+            class="text-lg font-semibold leading-6 text-gray-900"
             >Contact</a
           >
-          <a href="#" class="text-lg font-semibold leading-6 text-gray-900"
+          <a href="#faq" class="text-lg font-semibold leading-6 text-gray-900"
             >FAQ</a
           >
         </PopoverGroup>
@@ -78,23 +84,23 @@
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-2 py-6">
                 <a
-                  href="#"
+                  href="#produit"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Produit
                 </a>
                 <a
-                  href="#"
+                  href="#solution"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >Solutions</a
                 >
                 <a
-                  href="#"
+                  href="#contact"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >Contact</a
                 >
                 <a
-                  href="#"
+                  href="#faq"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >FAQ</a
                 >
@@ -159,7 +165,7 @@
   </section>
   <!-- Hero2 -->
 
-  <section class="bg-white dark:bg-gray-900">
+  <section id="produit" class="bg-white dark:bg-gray-900">
     <div data-aos="fade-right">
       <div
         class="grid max-w-screen-4xl py-8 mx-auto xl:gap-0 lg:py-4 lg:grid-cols-12"
@@ -171,7 +177,7 @@
           <h1
             class="max-w-5xl mb-4 text-4xl font-extrabold text-center tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
           >
-            Un <span style="color: #7e22ce">écosystème digitale </span>dédie à
+            Un <span style="color: #7e22ce">écosystème digitale </span>dédié à
             la <br />restauration
           </h1>
           <p
@@ -179,7 +185,7 @@
           >
             La platforme ultime pour une expérience de restauration sans
             friction. <br />
-            Un simple scan du QR Code pour acceder au menu et realiser la prise
+            Un simple scan du QR Code pour accéder au menu et réaliser la prise
             de commmande. <br />
             Un suivi de la préparation de la commande en temps réel. <br />
             Un service à table fluide et accelerer.
@@ -225,7 +231,7 @@
     </div>
   </section>
   <!--Hero3-->
-  <section class="bg-white h-auto dark:bg-gray-900">
+  <section id="solution" class="bg-white h-auto dark:bg-gray-900">
     <div class="grid lg:mt-8 lg:grid-cols-12">
       <div class="max-w-screen-xl text-center lg:col-span-6">
         <h1
@@ -328,7 +334,7 @@
 
   <!-- contact -->
   <section class="bg-white dark:bg-gray-900">
-    <div class="grid lg:mt-0 lg:grid-cols-12">
+    <div id="contact" class="grid lg:mt-0 lg:grid-cols-12">
       <div class="lg:col-span-5">
         <div
           class="mx-auto my-auto lg:py-32 flex justify-center items-center h-full"
@@ -384,7 +390,7 @@
             Programmer un entretien ? Une demonstration ? <br />Besoin
             d'informations supplementaires ? Néhistez pas !
           </p>
-          <form action="#" class="space-y-8">
+          <form action="#" class="space-y-8" netlify>
             <div>
               <label
                 for="email"
@@ -438,7 +444,7 @@
     </div>
   </section>
   <!-- FAQ -->
-  <section class="bg-white dark:bg-gray-900">
+  <section id="faq" class="bg-white dark:bg-gray-900">
     <div class="grid lg:mt-0 lg:grid-cols-12">
       <div class="lg:col-span-12 py-8 lg:py-0">
         <div
@@ -900,6 +906,9 @@ function toggleSlide() {
 </script>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
 .slide-container {
   position: relative;
   display: inline-flex;
@@ -921,5 +930,16 @@ function toggleSlide() {
 .half-max-content {
   width: max-content;
   transform: scaleX(0.5);
+}
+
+@media screen and (max-width: 992px) {
+  .slide-right {
+    transform: translateX(560%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .slide-right {
+    transform: translateX(450%);
+  }
 }
 </style>
