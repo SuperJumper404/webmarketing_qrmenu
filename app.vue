@@ -390,7 +390,7 @@
             Programmer un entretien ? Une demonstration ? <br />Besoin
             d'informations supplementaires ? Néhistez pas !
           </p>
-          <form action="#" class="space-y-8" data-netlify="true" netlify>
+          <form action="#" class="space-y-8">
             <div>
               <label
                 for="email"
